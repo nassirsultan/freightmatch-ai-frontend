@@ -1,16 +1,66 @@
-# React + Vite
+# FreightMatch AI — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-based dashboard for AI-powered freight carrier matching. Allows shippers to submit shipment requests and instantly view matched carriers powered by Groq AI.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- Tailwind CSS
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Shipment request form with dropdown validation
+- Real-time AI-powered carrier matching
+- Loading state during AI processing
+- Responsive two-column dashboard layout
+- Industrial dark theme with orange accents
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="2541" height="1337" alt="image" src="https://github.com/user-attachments/assets/fecb7082-bfcc-457c-9911-1db4342b1fcb" />
+
+
+## Setup & Run
+
+1. Clone the repo
+2. Install dependencies:
+```bash
+npm install
+```
+3. Create `.env` file:
+```
+VITE_API_BASE_URL=http://localhost:8080
+```
+4. Start the dev server:
+```bash
+npm run dev
+```
+
+Frontend runs on `http://localhost:5173`
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ShipmentForm.jsx    → Shipment request form with validation
+│   └── CarrierResults.jsx  → Matched carrier cards display
+└── App.jsx                 → Root component, state management
+```
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_API_BASE_URL` | Backend API base URL |
+
+## Deployment
+
+- Frontend deployed on Vercel
+- Connect repo to Vercel, set root directory to `/`
+- Add `VITE_API_BASE_URL` as environment variable pointing to deployed backend
+
+## Related
+
+- [FreightMatch AI Backend](https://github.com/nassirsultan/freightmatch-ai-backend)
