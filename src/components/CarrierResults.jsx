@@ -25,7 +25,7 @@ function CarrierResults({ carriers }) {
               </span>
             </div>
             <p className="text-gray-400 text-sm">{carrier.email}</p>
-            <div className="flex gap-4 mt-1">
+            <div className="flex flex-wrap gap-4 mt-1">
               <div>
                 <p className="text-gray-500 text-xs uppercase tracking-wider">
                   Coverage
