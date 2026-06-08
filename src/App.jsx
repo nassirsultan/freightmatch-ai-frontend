@@ -18,7 +18,7 @@ function App() {
       </header>
 
       {/* Main Layout */}
-      <main className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 h-[calc(100vh-80px)]">
+      <main className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:h-[calc(100vh-80px)]">
         <ShipmentForm onMatch={setMatchedCarriers} />
         <CarrierResults carriers={matchedCarriers} />
       </main>
